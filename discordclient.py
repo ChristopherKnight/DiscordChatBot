@@ -2,7 +2,10 @@ import discord
 import os
 import commands.commandparser as cmdparser
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+
+client = discord.Client(intents = intents)
 
 @client.event
 async def on_ready():
@@ -14,7 +17,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    msg = cmdparser.checkcommands(message)
+    msg = cmdparser.checkcommands(message, client)
     if msg:
       #rich text formatting needs embeded
       if msg.type == "rich":

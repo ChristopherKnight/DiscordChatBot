@@ -1,0 +1,37 @@
+{
+    "guild_id": "810330418657099786",
+    "clubs": [
+        {
+            "name": "ToonTown Terrors",
+            "short_name": "TTT",
+            "role": "ToonTown Terrors",
+            "club_max": 50,
+            "min_ss": 150000,
+            "min_level": 60
+        },
+        {
+            "name": "Area 626",
+            "short_name": "A626",
+            "role": "Area 626",
+            "club_max": 50,
+            "min_ss": 140000,
+            "min_level": 50
+        },
+        {
+            "name": "BlackSpire Outpost",
+            "short_name": "BSO",
+            "role": "BlackSpire Outpost",
+            "club_max": 50,
+            "min_ss": 125000,
+            "min_level": 50
+        },
+        {
+            "name": "Pascal's Paint Shop",
+            "short_name": "PPS",
+            "role": "Pascal's Paint Shop",
+            "club_max": 50,
+            "min_ss": 0,
+            "min_level": 0
+        }
+    ]
+}

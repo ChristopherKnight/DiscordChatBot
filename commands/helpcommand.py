@@ -6,6 +6,7 @@ HELP_COMMAND = '!help'
 
 def getResponseMessage(msg):
   #first check if the user wants advanced help, if not return other message
+  msg = msg.content
   adv_help = ah.getIfAdvancedHelp(msg)
   if adv_help:
     helpMessage = ("""No advanced help for the help command""")

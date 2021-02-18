@@ -7,6 +7,7 @@ CQ_COMMAND = '!cq-time'
 
 def getResponseMessage(msg):
   #first check if the user wants advanced help, if not return other message
+  msg = msg.content
   adv_help = ah.getIfAdvancedHelp(msg)
   if adv_help:
     helpMessage = (
@@ -28,14 +29,14 @@ def getResponseMessage(msg):
     try:
       split_msg = msg.split(" ")
       if len(split_msg) == 3:
-        team1 = (45000 - int(split_msg[1])) / int(split_msg[2]) / 60;
-        team1 = math.floor(team1);
+        team1 = (45000 - int(split_msg[1])) / int(split_msg[2]) / 60
+        team1 = math.floor(team1)
         helpMessage = 'This team will reach 45k in ' + str(team1) + ' hours'
       elif len(split_msg) == 5:
-        team1 = (45000 - int(split_msg[1])) / int(split_msg[2]) / 60;
-        team2 = (45000 - int(split_msg[3])) / int(split_msg[4]) / 60;
-        team1 = math.floor(team1);
-        team2 = math.floor(team2);
+        team1 = (45000 - int(split_msg[1])) / int(split_msg[2]) / 60
+        team2 = (45000 - int(split_msg[3])) / int(split_msg[4]) / 60
+        team1 = math.floor(team1)
+        team2 = math.floor(team2)
         if (team2 < team1):
           helpMessage = 'Team 2 will overtake team 1 and win in ' + str(team2) + ' hours'
         else:
